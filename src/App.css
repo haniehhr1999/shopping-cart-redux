@@ -1,0 +1,8 @@
+@font-face{
+  font-family: 'vazir';
+  src: url('shopping-card/public/fonts/Vazir-Medium.ttf');
+}
+
+*{
+  font-family: 'vazir';
+}
