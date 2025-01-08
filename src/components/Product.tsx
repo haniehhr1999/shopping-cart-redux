@@ -8,20 +8,28 @@ type productProps = {
   image: string;
 };
 
-const Product = ({id, title, price, image }: productProps) => {
+const Product = ({ id, title, price, image }: productProps) => {
+  const dispatch = useCartDispatch();
 
-    const dispatch = useCartDispatch()
-    
-    const handleAddToCart = ()=>{
-        dispatch(addToCart({id , title , price}))
+  const handleAddToCart = () => {
+    dispatch(addToCart({ id, title, price }));
+  };
 
-    }
   return (
-    <div className=" bg-slate-800 p-5 rounded-md">
-        <img src= {image} alt="" className="rounded-t-md" />
-        <h2>{title}</h2>
+    <div className=" bg-[#3b3b3b] p-5 rounded-md text-white">
+      <img src={image} alt="" className="rounded-t-md" />
+      <div className="py-5 flex justify-between">
         <div>{price}$</div>
-        <div><button className="w-full bg-slate-600 rounded px-3 py-2" onClick={handleAddToCart}>افزودن به سبد خرید</button></div>
+        <h2>{title}</h2>
+      </div>
+      <div>
+        <button
+          className="w-full bg-[#181818] rounded px-3 py-2"
+          onClick={handleAddToCart}
+        >
+          افزودن به سبد خرید
+        </button>
+      </div>
     </div>
   );
 };

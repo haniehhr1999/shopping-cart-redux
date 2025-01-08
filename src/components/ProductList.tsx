@@ -6,7 +6,7 @@ type ProductListProps = {
 
 const ProductList = ( { children } : ProductListProps) => {
   return (
-    <div className="px-36 bg-[#181818]">
+    <div className="px-10 md:px-24 lg:px-36 bg-[#181818]">
         <div>
             {children}
         </div>
